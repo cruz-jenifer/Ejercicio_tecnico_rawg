@@ -3,6 +3,7 @@ import sys
 from dotenv import load_dotenv #para no escribir directamente la api key en el codigo
 from api_client import get_games
 from data_processor import procesar_juegos
+from csv_generator import generar_csv
 
 def main():
     load_dotenv() #buscamos en el .env la api key  
@@ -29,6 +30,17 @@ def main():
         print(f"{juego['Nombre del videojuego']} | {juego['Rating']} | {juego['Fecha de lanzamiento']}")
         print(f"   Reqs: {str(juego['Requerimientos mínimos'])[:60]}...")
     print("-" * 30)
+
+ # GENERACIÓN DEL ARCHIVO CSV 
+    print("\n Generando archivo CSV...")
+    ruta_csv = "output/videojuegos.csv"
+    generar_csv(juegos_limpios, ruta_csv)
+    
+    # verificamos que el archivo csv se haya creado 
+    if os.path.exists(ruta_csv):
+        print(f"CSV guardado correctamente en: {ruta_csv}")
+    else:
+        print("ERROR: No se pudo generar el archivo CSV")
 
 if __name__ == "__main__":
     main()
