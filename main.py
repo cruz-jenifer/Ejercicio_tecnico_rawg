@@ -2,6 +2,7 @@ import os
 import sys
 from dotenv import load_dotenv #para no escribir directamente la api key en el codigo
 from api_client import get_games
+from data_processor import procesar_juegos
 
 def main():
     load_dotenv() #buscamos en el .env la api key  
@@ -18,6 +19,16 @@ def main():
     
     for juego in juegos_crudos:
         print(f"{juego.get('name')}")
+
+ # PROCESAMIENTO DE DATOS 
+    print("\n Procesando y limpiando datos...")
+    juegos_limpios = procesar_juegos(juegos_crudos)
+    
+    print("-" * 30)
+    for juego in juegos_limpios:
+        print(f"{juego['Nombre del videojuego']} | {juego['Rating']} | {juego['Fecha de lanzamiento']}")
+        print(f"   Reqs: {str(juego['Requerimientos mínimos'])[:60]}...")
+    print("-" * 30)
 
 if __name__ == "__main__":
     main()
