@@ -1,0 +1,9 @@
+# credenciales
+.env
+
+# archivos compilados
+__pycache__/
+*.pyc
+
+# archivos de salida
+output/
