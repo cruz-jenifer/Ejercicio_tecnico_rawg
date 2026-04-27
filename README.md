@@ -57,5 +57,5 @@ Al finalizar la ejecución, el script generará la carpeta `output/` con los sig
 - [x] **Commit 1:** Setup, proyecto base y configuración.
 - [x] **Commit 2:** Cliente HTTP y consulta GET a la API de RAWG.
 - [x] **Commit 3:** Procesamiento y extracción de datos (Filtrado de JSON).
-- [x] **Commit 4:** Generación del archivo CSV.
-- [ ] **Commit 5:** Generación del reporte en Excel y ordenamiento.
+- [x] **Commit 4:** Generación de archivo CSV.
+- [x] **Commit 5:** Generación del reporte en Excel y ordenamiento.
