@@ -51,6 +51,8 @@ Al finalizar la ejecución, el script generará la carpeta `output/` con los sig
 * **videojuegos.csv:** Datos limpios y procesados.
 * **reporte_videojuegos.xlsx:** Reporte en formato tabla, ordenado por requerimientos mínimos.
 
+> *Nota: Se incluyen los archivos generados como muestra; pueden borrarse para validar el funcionamiento del sistema.*
+
 ---
 
 ## Estado del Proyecto (Commits)
