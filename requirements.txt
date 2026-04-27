@@ -1,3 +1,4 @@
+#versiones usadas
 requests==2.33.1
 python-dotenv==1.2.2
 openpyxl==3.1.5
